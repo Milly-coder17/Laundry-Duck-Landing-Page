@@ -1,0 +1,105 @@
+.hero {
+    width: min(1160px, calc(100% - 32px));
+    min-height: 520px;
+    margin: 0 auto;
+    padding: 150px 35px;
+    display: flex;
+    align-items: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.heroContent {
+    width: 100%;
+    max-width: 700px;
+}
+
+.heroLabel {
+    display: inline-block;
+    margin: 0 0 22px;
+    padding: 8px 14px;
+    background: #fff3bd;
+    color: #242424;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+.heroContent h1 {
+    margin: 0;
+    color: #242424;
+    font-size: clamp(46px, 5.5vw, 76px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+}
+
+
+.heroContent h1 span {
+    color: #e5ad00;
+}
+
+.heroDescription {
+    max-width: 470px;
+    margin: 24px 0 30px;
+    color: #626262;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.heroButton {
+    display: inline-block;
+    padding: 15px 24px;
+    background: #242424;
+    color: #ffffff;
+    border: 2px solid #242424;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.25s ease, color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.heroButton:hover {
+    background: #ffca05;
+    color: #242424;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: auto;
+        padding: 55px 20px;
+    }
+
+    .heroContent h1 {
+        font-size: clamp(36px, 7vw, 52px);
+        letter-spacing: -1.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 8px;
+    }
+
+    .heroLabel {
+        font-size: 11px;
+    }
+
+    .heroContent h1 {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+
+    .heroDescription {
+        font-size: 14px;
+    }
+
+    .heroButton {
+        padding: 13px 20px;
+    }
+}

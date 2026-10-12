@@ -1,0 +1,280 @@
+.navbar {
+    width: min(1160px, calc(100% - 32px));
+    height: 72px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+    background: #ffca05;
+    border: 2px solid #242424;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: #242424;
+    text-decoration: none;
+}
+
+.logoImage {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.navLinks {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.navLinks a,
+.loginBtn {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navLinks a::after,
+.loginBtn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.navLinks a:hover,
+.loginBtn:hover {
+    color: #ffffff;
+}
+
+.navLinks a:hover::after,
+.loginBtn:hover::after {
+    transform: scaleX(1);
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.loginBtn {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.signupBtn {
+    background: #242424;
+    color: #ffffff !important;
+    border: 2px solid #242424;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.signupBtn:hover {
+    background: #ffffff;
+    color: #242424 !important;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logoText {
+    margin: 0;
+    padding: 0;
+    color: #242424;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    background: transparent;
+    border: 2px solid #242424;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menuToggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #242424;
+    border-radius: 3px;
+}
+
+.sidebarOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebarOverlay.overlayVisible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobileSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: min(320px, 85%);
+    height: 100dvh;
+    padding: 25px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-left: 2px solid #242424;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+}
+
+.mobileSidebar.sidebarOpen {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.sidebarHeader {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.sidebarTitle {
+    color: #242424;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.sidebarClose {
+    width: 38px;
+    height: 38px;
+    background: #ffca05;
+    color: #242424;
+    border: 2px solid #242424;
+    border-radius: 8px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.sidebarLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.sidebarLinks a,
+.sidebarActions a {
+    display: block;
+    padding: 14px 16px;
+    color: #242424;
+    background: #ffffff;
+    border: 2px solid #242424;
+    border-radius: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebarLinks a:hover,
+.sidebarActions a:hover {
+    background: #ffca05;
+    color: #242424;
+}
+
+.sidebarActions {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+.sidebarActions a {
+    padding: 14px;
+    border: 2px solid #242424;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sidebarActions .sidebarSignup {
+    background: #242424;
+    color: #ffffff;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        width: calc(100% - 32px);
+        height: 68px;
+        padding: 0 12px;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .logoImage {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logoText {
+        font-size: 17px;
+    }
+
+    .navLinks,
+    .headerActions {
+        display: none;
+    }
+
+    .menuToggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+}
