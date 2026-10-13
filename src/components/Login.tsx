@@ -1,6 +1,7 @@
 
 import laundryDuckLogo from "../assets/Laundry Duck Logo.png"
 import "../styles/Login.css"
+import { Link } from "react-router-dom"
 
 function Login() {
   return (
@@ -21,9 +22,9 @@ function Login() {
         </form>
 
         <p className="registerText">
-          Don't have an account? <a href="/register">Sign Up</a>
+          Don't have an account? <Link to="/register">Sign Up</Link>
         </p>
-        <a className="backLink" href="/">Back to Home</a>
+        <Link className="backLink" to="/">Back to Home</Link>
       </div>
     </main>
   )

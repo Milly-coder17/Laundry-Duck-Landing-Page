@@ -1,4 +1,6 @@
+
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import laundryDuckLogo from "../assets/Laundry Duck Logo.png"
 import "../styles/Header.css"
 
@@ -12,14 +14,14 @@ function Header() {
   return (
     <>
       <header className="navbar">
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img
             src={laundryDuckLogo}
             alt="LaundryDuck Logo"
             className="logoImage"
           />
           <span className="logoText">LaundryDuck</span>
-        </a>
+        </Link>
 
         <nav className="navLinks">
           <a href="#services">Services</a>
@@ -28,8 +30,12 @@ function Header() {
         </nav>
 
         <div className="headerActions">
-          <a href="/login" className="loginBtn">Log In</a>
-          <a href="/register" className="signupBtn">Get Started</a>
+          <Link to="/login" className="loginBtn">
+            Log In
+          </Link>
+          <Link to="/register" className="signupBtn">
+            Get Started
+          </Link>
         </div>
 
         <button
@@ -49,27 +55,37 @@ function Header() {
         onClick={closeMenu}
       ></div>
 
-    <aside className={`mobileSidebar ${menuOpen ? "sidebarOpen" : ""}`}>
-    <div className="sidebarHeader">
-        <button
-        className="sidebarClose"
-        onClick={closeMenu}
-        aria-label="Close menu"
-        >
-        &times;
-        </button>
-    </div>
+      <aside
+        className={`mobileSidebar ${menuOpen ? "sidebarOpen" : ""}`}
+      >
+        <div className="sidebarHeader">
+          <button
+            className="sidebarClose"
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
+            &times;
+          </button>
+        </div>
 
-    <nav className="sidebarLinks">
-        <a href="#services" onClick={closeMenu}>Services</a>
-        <a href="#howItWorks" onClick={closeMenu}>How It Works</a>
-        <a href="#about" onClick={closeMenu}>About Us</a>
-    </nav>
+        <nav className="sidebarLinks">
+          <a href="#services" onClick={closeMenu}>
+            Services
+          </a>
+          <a href="#howItWorks" onClick={closeMenu}>
+            How It Works
+          </a>
+          <a href="#about" onClick={closeMenu}>
+            About Us
+          </a>
+        </nav>
 
-    <div className="sidebarActions">
-        <a href="/login" onClick={closeMenu}>Log In</a>
-    </div>
-    </aside>
+        <div className="sidebarActions">
+          <Link to="/login" onClick={closeMenu}>
+            Log In
+          </Link>
+        </div>
+      </aside>
     </>
   )
 }

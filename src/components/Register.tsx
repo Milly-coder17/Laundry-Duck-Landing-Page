@@ -1,4 +1,5 @@
 import laundryDuckLogo from "../assets/Laundry Duck Logo.png"
+import { Link } from "react-router-dom"
 import "../styles/Register.css"
 
 function Register() {
@@ -49,10 +50,10 @@ function Register() {
         </form>
 
         <p className="registerLoginText">
-          Already have an account? <a href="/login">Log In</a>
+          Already have an account? <Link to="/login">Log In</Link>
         </p>
 
-        <a className="registerBackLink" href="/">Back to Home</a>
+        <Link className="registerBackLink" to="/">Back to Home</Link>
       </div>
     </main>
   )
