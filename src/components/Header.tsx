@@ -1,7 +1,6 @@
-
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import laundryDuckLogo from "../assets/Laundry Duck Logo.png"
+import laundryDuckLogo from "../assets/Laundry Duck Logo.svg"
 import "../styles/Header.css"
 
 function Header() {
@@ -14,7 +13,7 @@ function Header() {
   return (
     <>
       <header className="navbar">
-        <Link to="/" className="logo">
+        <Link to="/" className="logo" onClick={closeMenu}>
           <img
             src={laundryDuckLogo}
             alt="LaundryDuck Logo"
@@ -24,21 +23,28 @@ function Header() {
         </Link>
 
         <nav className="navLinks">
-          <a href="#services">Services</a>
-          <a href="#howItWorks">How It Works</a>
-          <a href="#about">About Us</a>
+          <a href="#about" onClick={closeMenu}>
+            About Us
+          </a>
+          <a href="#howItWorks" onClick={closeMenu}>
+            How It Works
+          </a>
+          <a href="#registration" onClick={closeMenu}>
+            For Riders & Shops
+          </a>
+          <a href="#faqs" onClick={closeMenu}>
+            FAQs
+          </a>
         </nav>
 
         <div className="headerActions">
-          <Link to="/login" className="loginBtn">
-            Log In
-          </Link>
-          <Link to="/register" className="signupBtn">
+          <button type="button" className="signupBtn">
             Get Started
-          </Link>
+          </button>
         </div>
 
         <button
+          type="button"
           className="menuToggle"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -60,6 +66,7 @@ function Header() {
       >
         <div className="sidebarHeader">
           <button
+            type="button"
             className="sidebarClose"
             onClick={closeMenu}
             aria-label="Close menu"
@@ -68,22 +75,29 @@ function Header() {
           </button>
         </div>
 
-        <nav className="sidebarLinks">
-          <a href="#services" onClick={closeMenu}>
-            Services
+        <nav className="sidebarNavLinks">
+          <a href="#about" onClick={closeMenu}>
+            About Us
           </a>
           <a href="#howItWorks" onClick={closeMenu}>
             How It Works
           </a>
-          <a href="#about" onClick={closeMenu}>
-            About Us
+          <a href="#registration" onClick={closeMenu}>
+            For Riders & Shops
+          </a>
+          <a href="#faqs" onClick={closeMenu}>
+            FAQs
           </a>
         </nav>
 
         <div className="sidebarActions">
-          <Link to="/login" onClick={closeMenu}>
-            Log In
-          </Link>
+          <button
+            type="button"
+            className="sidebarSignup"
+            onClick={closeMenu}
+          >
+            Get Started
+          </button>
         </div>
       </aside>
     </>

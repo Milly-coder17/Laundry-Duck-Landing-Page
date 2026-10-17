@@ -1,41 +1,30 @@
 .hero {
-    width: min(1160px, calc(100% - 32px));
+    width: min(1360px, calc(100% - 32px));
     min-height: 520px;
     margin: 0 auto;
-    padding: 150px 35px;
+    padding: 100px 35px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     font-family: "Plus Jakarta Sans", sans-serif;
     box-sizing: border-box;
 }
 
 .heroContent {
-    width: 100%;
-    max-width: 700px;
+    flex: 1;
+    min-width: 0;
+    max-width: 650px;
 }
-
-.heroLabel {
-    display: inline-block;
-    margin: 0 0 22px;
-    padding: 8px 14px;
-    background: #fff3bd;
-    color: #242424;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
 
 .heroContent h1 {
     margin: 0;
     color: #242424;
-    font-size: clamp(46px, 5.5vw, 76px);
+    font-size: 80px;
     font-weight: 800;
     line-height: 1.08;
     letter-spacing: -2.5px;
 }
-
 
 .heroContent h1 span {
     color: #e5ad00;
@@ -56,9 +45,10 @@
     color: #ffffff;
     border: 2px solid #242424;
     border-radius: 10px;
-    text-decoration: none;
     font-size: 15px;
     font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
     transition: background 0.25s ease, color 0.25s ease,
         transform 0.25s ease;
 }
@@ -69,25 +59,57 @@
     transform: translateY(-3px);
 }
 
+.heroImage {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImage img {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    object-fit: contain;
+}
+
 @media (max-width: 800px) {
     .hero {
         min-height: auto;
-        padding: 55px 20px;
+        padding: 65px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .heroContent {
+        width: 100%;
     }
 
     .heroContent h1 {
         font-size: clamp(36px, 7vw, 52px);
         letter-spacing: -1.5px;
     }
+
+    .heroDescription {
+        margin: 24px auto 30px;
+    }
+
+    .heroImage {
+        width: 100%;
+    }
+
+    .heroImage img {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 480px) {
     .hero {
         padding: 40px 8px;
-    }
-
-    .heroLabel {
-        font-size: 11px;
+        gap: 28px;
     }
 
     .heroContent h1 {

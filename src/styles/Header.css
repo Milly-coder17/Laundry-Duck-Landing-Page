@@ -1,5 +1,5 @@
 .navbar {
-    width: min(1160px, calc(100% - 32px));
+    width: min(1360px, calc(100% - 32px));
     height: 72px;
     margin: 16px auto 0;
     padding: 0 24px;
@@ -34,14 +34,12 @@
     font-weight: 700;
 }
 
-.navLinks a,
-.loginBtn {
+.navLinks a {
     position: relative;
     transition: color 0.3s ease;
 }
 
-.navLinks a::after,
-.loginBtn::after {
+.navLinks a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -54,13 +52,11 @@
     transition: transform 0.3s ease;
 }
 
-.navLinks a:hover,
-.loginBtn:hover {
+.navLinks a:hover {
     color: #ffffff;
 }
 
-.navLinks a:hover::after,
-.loginBtn:hover::after {
+.navLinks a:hover::after {
     transform: scaleX(1);
 }
 
@@ -68,12 +64,6 @@
     display: flex;
     align-items: center;
     gap: 18px;
-}
-
-.loginBtn {
-    font-size: 14px;
-    font-weight: 700;
-    white-space: nowrap;
 }
 
 .signupBtn {
@@ -84,7 +74,9 @@
     padding: 11px 18px;
     font-size: 14px;
     font-weight: 700;
+    font-family: inherit;
     white-space: nowrap;
+    cursor: pointer;
     transition: background 0.25s ease, color 0.25s ease;
 }
 
@@ -208,7 +200,7 @@
 }
 
 .sidebarLinks a,
-.sidebarActions a {
+.sidebarActions button {
     display: block;
     padding: 14px 16px;
     color: #242424;
@@ -221,10 +213,11 @@
     text-decoration: none;
     box-sizing: border-box;
     transition: background 0.2s ease, color 0.2s ease;
+    cursor: pointer;
 }
 
 .sidebarLinks a:hover,
-.sidebarActions a:hover {
+.sidebarActions button:hover {
     background: #ffca05;
     color: #242424;
 }
@@ -236,7 +229,7 @@
     padding-top: 24px;
 }
 
-.sidebarActions a {
+.sidebarActions button {
     padding: 14px;
     border: 2px solid #242424;
     border-radius: 10px;

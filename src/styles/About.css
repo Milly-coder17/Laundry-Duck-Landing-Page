@@ -1,0 +1,46 @@
+.about {
+    padding: 100px 8%;
+    background-color: #f8f8f5;
+}
+
+.aboutContent {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aboutLabel {
+    color: #b18a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.aboutContent h2 {
+    color: #242424;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.aboutDescription {
+    color: #626262;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 70px 6%;
+    }
+
+    .aboutContent h2 {
+        font-size: 32px;
+    }
+
+    .aboutDescription {
+        font-size: 15px;
+    }
+}

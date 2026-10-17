@@ -1,10 +1,11 @@
+
+import driverImage from "../assets/Driver.png"
 import "../styles/Hero.css"
 
 function Hero() {
   return (
     <section className="hero">
       <div className="heroContent">
-
         <h1>
           Effortless <span>Laundry.</span>
           <br />
@@ -17,9 +18,13 @@ function Hero() {
           take care of the rest.
         </p>
 
-        <a href="/register" className="heroButton">
+        <button type="button" className="heroButton">
           Get Started
-        </a>
+        </button>
+      </div>
+
+      <div className="heroImage">
+        <img src={driverImage} alt="LaundryDuck delivery rider on a motorcycle" />
       </div>
     </section>
   )
