@@ -4,6 +4,7 @@ import Hero from "./components/Hero"
 import FAQs from "./components/FAQs"
 import About from "./components/About"
 import HowItWorks from "./components/HowItWorks"
+import RegistrationOptions from "./components/RegistrationOptions"
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <About />
       <HowItWorks />
+      <RegistrationOptions />
       <FAQs />
     </>
   )

@@ -33,6 +33,19 @@ function HowItWorks() {
   ]
 
   const step = steps[currentStep]
+  const isLastStep = currentStep === steps.length - 1
+
+  function handleNextStep() {
+    if (isLastStep) {
+      setCurrentStep(0)
+    } else {
+      setCurrentStep((previous) => previous + 1)
+    }
+  }
+
+  function handlePreviousStep() {
+    setCurrentStep((previous) => Math.max(0, previous - 1))
+  }
 
   return (
     <section className="howItWorks" id="howItWorks">
@@ -50,6 +63,7 @@ function HowItWorks() {
             <img
               src={step.image}
               alt={step.title}
+              key={currentStep}
             />
 
             {currentStep === 0 && (
@@ -75,7 +89,9 @@ function HowItWorks() {
           {currentStep === 2 && (
             <>
               <span className="chooseShopArrow">→</span>
-              <span className="chooseShopLabel">Click Choose This Shop</span>
+              <span className="chooseShopLabel">
+                Click Choose This Shop
+              </span>
             </>
           )}
         </div>
@@ -91,14 +107,19 @@ function HowItWorks() {
           <div className="walkthroughButtons">
             <button
               type="button"
-              className="walkthroughNext"
-              onClick={() =>
-                setCurrentStep((currentStep + 1) % steps.length)
-              }
+              className="walkthroughPrevious"
+              onClick={handlePreviousStep}
+              disabled={currentStep === 0}
             >
-              {currentStep === steps.length - 1
-                ? "Start Over ↻"
-                : "Next Step →"}
+              ← Previous Step
+            </button>
+
+            <button
+              type="button"
+              className="walkthroughNext"
+              onClick={handleNextStep}
+            >
+              {isLastStep ? "Start Over ↻" : "Next Step →"}
             </button>
           </div>
         </div>

@@ -1,0 +1,245 @@
+.registrationOptions {
+    padding: 100px 8%;
+    background-color: #f8f8f5;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.registrationOptionsHeader {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.registrationOptionsLabel {
+    color: #b18a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.registrationOptionsHeader h2 {
+    color: #242424;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.registrationOptionsHeader>p:last-of-type {
+    color: #626262;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.registrationRoleButtons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.registrationRoleButtons button {
+    padding: 14px 24px;
+    background-color: #ffffff;
+    color: #242424;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.registrationRoleButtons button.active {
+    background-color: #ffca05;
+    border-color: #ffca05;
+}
+
+.registrationWalkthrough {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.registrationPhone {
+    flex: 1;
+    width: 100%;
+    max-width: 405px;
+    height: 720px;
+    position: relative;
+    background-color: #242424;
+    border: 1px solid #242424;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.registrationPhone img {
+    display: block;
+    width: 420px;
+    max-width: none;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-49.6%);
+}
+
+.registrationInfo {
+    flex: 1;
+    max-width: 400px;
+}
+
+.registrationStepNumber {
+    color: #b18a00;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.registrationInfo h3 {
+    color: #242424;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.registrationInfo>p:last-child {
+    color: #626262;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.registrationRoleButtons button {
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.registrationRoleButtons button:hover {
+    border-color: #ffca05;
+    transform: translateY(-2px);
+}
+
+.registrationStepButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.registrationNavButton {
+    padding: 12px 18px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.registrationNavButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.registrationNavButton.primary {
+    background-color: #ffca05;
+    border-color: #ffca05;
+    color: #242424;
+}
+
+.registrationNavButton.primary:hover:not(:disabled) {
+    background-color: #f0bd00;
+    border-color: #f0bd00;
+}
+
+.registrationNavButton.secondary {
+    background-color: #ffffff;
+    border-color: #deded8;
+    color: #242424;
+}
+
+.registrationNavButton.secondary:hover:not(:disabled) {
+    border-color: #ffca05;
+}
+
+.registrationNavButton.restart {
+    background-color: #242424;
+    border-color: #242424;
+    color: #ffffff;
+}
+
+.registrationNavButton.restart:hover:not(:disabled) {
+    background-color: #404040;
+    border-color: #404040;
+}
+
+.registrationNavButton:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+@media (max-width: 768px) {
+    .registrationOptions {
+        padding: 70px 6%;
+    }
+
+    .registrationOptionsHeader h2 {
+        font-size: 32px;
+    }
+
+    .registrationWalkthrough {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .registrationPhone {
+        max-width: 320px;
+    }
+
+    .registrationInfo {
+        width: 100%;
+        max-width: 520px;
+        text-align: center;
+    }
+
+    .registrationInfo h3 {
+        font-size: 30px;
+    }
+
+    .registrationRoleButtons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .registrationOptions {
+        padding: 55px 5%;
+    }
+
+    .registrationOptionsHeader h2 {
+        font-size: 28px;
+    }
+
+    .registrationPhone {
+        max-width: 290px;
+    }
+
+    .registrationInfo h3 {
+        font-size: 26px;
+    }
+
+    .registrationInfo>p:last-child {
+        font-size: 14px;
+    }
+}

@@ -210,6 +210,41 @@
     pointer-events: none;
 }
 
+
+.walkthroughButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-top: 32px;
+}
+
+.walkthroughPrevious {
+    padding: 14px 20px;
+    background-color: #ffffff;
+    color: #242424;
+    border: 2px solid #deded8;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.walkthroughPrevious:hover:not(:disabled) {
+    background-color: #f8f8f5;
+    border-color: #ffca05;
+    transform: translateY(-2px);
+}
+
+.walkthroughPrevious:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+
 @media (max-width: 768px) {
     .howItWorks {
         padding: 70px 6%;
