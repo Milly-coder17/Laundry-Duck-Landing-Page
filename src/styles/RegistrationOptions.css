@@ -71,22 +71,22 @@
     flex: 1;
     width: 100%;
     max-width: 405px;
-    height: 720px;
+    aspect-ratio: 9 / 16;
+    height: auto;
     position: relative;
     background-color: #242424;
     border: 1px solid #242424;
     border-radius: 20px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .registrationPhone img {
     display: block;
-    width: 420px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     position: relative;
-    left: 50%;
-    transform: translateX(-49.6%);
 }
 
 .registrationInfo {

@@ -48,6 +48,7 @@
     aspect-ratio: 9 / 16;
     height: auto;
     position: relative;
+    box-sizing: border-box;
 }
 
 .walkthroughPhone {
@@ -100,12 +101,6 @@
     margin: 0;
 }
 
-.walkthroughButtons {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 32px;
-}
-
 .walkthroughNext {
     padding: 14px 24px;
     background-color: #ffca05;
@@ -132,8 +127,8 @@
 
 .registerHighlight {
     position: absolute;
-    width: 326px;
-    height: 45px;
+    width: 80.5%;
+    height: 6.25%;
     left: 50.6%;
     bottom: 1px;
     transform: translateX(-50%);
@@ -144,8 +139,8 @@
 
 .registerLabel {
     position: absolute;
-    left: calc(50% + 208px);
-    top: calc(100% - 23.5px);
+    left: 101.4%;
+    top: 96.7%;
     transform: translateY(-50%);
     color: red;
     font-size: 14px;
@@ -155,8 +150,8 @@
 
 .registerArrow {
     position: absolute;
-    left: calc(50% + 180px);
-    top: calc(100% - 23.5px);
+    left: 94.4%;
+    top: 96.7%;
     transform: translateY(-50%);
     color: red;
     font-size: 24px;
@@ -166,8 +161,8 @@
 
 .serviceHighlight {
     position: absolute;
-    width: 370px;
-    height: 346px;
+    width: 91.4%;
+    height: 48%;
     left: 50.2%;
     top: 50%;
     transform: translate(-50%, -27%);
@@ -178,10 +173,10 @@
 
 .chooseShopHighlight {
     position: absolute;
-    width: 340px;
-    height: 55px;
+    width: 84%;
+    height: 7.65%;
     left: 50.4%;
-    bottom: 42px;
+    bottom: 5.8%;
     transform: translateX(-50%);
     border: 2px solid red;
     box-sizing: border-box;
@@ -190,8 +185,8 @@
 
 .chooseShopLabel {
     position: absolute;
-    left: calc(50% + 208px);
-    bottom: 69.5px;
+    left: 101.4%;
+    bottom: 9.65%;
     transform: translateY(50%);
     color: red;
     font-size: 14px;
@@ -201,22 +196,13 @@
 
 .chooseShopArrow {
     position: absolute;
-    left: calc(50% + 180px);
-    bottom: 69.5px;
+    left: 94.4%;
+    bottom: 9.65%;
     transform: translateY(50%);
     color: red;
     font-size: 24px;
     font-weight: 800;
     pointer-events: none;
-}
-
-
-.walkthroughButtons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: flex-start;
-    margin-top: 32px;
 }
 
 .walkthroughPrevious {
@@ -243,7 +229,6 @@
     opacity: 0.45;
     cursor: not-allowed;
 }
-
 
 @media (max-width: 768px) {
     .howItWorks {
@@ -276,6 +261,29 @@
 
     .walkthroughButtons {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .walkthrough {
+        gap: 60px;
+    }
+
+    .registerLabel,
+    .chooseShopLabel {
+        left: 50%;
+        top: auto;
+        bottom: -50px;
+        transform: translateX(-50%);
+        font-size: 12px;
+    }
+
+    .registerArrow,
+    .chooseShopArrow {
+        left: 50%;
+        top: auto;
+        bottom: -30px;
+        transform: translateX(-50%) rotate(-90deg);
     }
 }
 
