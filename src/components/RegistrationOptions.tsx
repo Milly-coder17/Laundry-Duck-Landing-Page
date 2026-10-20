@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import laundrySignUpImage from "../assets/LaundrySignUp.png"
 import laundryShopRegistrationForm from "../assets/LaundryShopRegistrationForm.png"
@@ -10,7 +9,7 @@ import "../styles/RegistrationOptions.css"
 type Role = "rider" | "shop"
 
 function RegistrationOptions() {
-  const [selectedRole, setSelectedRole] = useState<Role>("rider")
+  const [selectedRole, setSelectedRole] = useState<Role>("shop")
   const [currentStep, setCurrentStep] = useState(0)
 
   const steps = {
@@ -102,12 +101,28 @@ function RegistrationOptions() {
       </div>
 
       <div className="registrationWalkthrough">
-        <div className="registrationPhone">
-          <img
-            src={step.image}
-            alt={`${selectedRole === "rider" ? "Rider" : "Laundry shop"} registration, step ${currentStep + 1}`}
-            key={`${selectedRole}-${currentStep}`}
-          />
+        <div
+          className={`registrationPhoneWrapper${selectedRole === "shop" && currentStep === 0 ? " shopRegisterWalkthrough" : ""}`}
+        >
+          <div className="registrationPhone">
+            <img
+              src={step.image}
+              alt={`${selectedRole === "rider" ? "Rider" : "Laundry shop"} registration, step ${currentStep + 1}`}
+              key={`${selectedRole}-${currentStep}`}
+            />
+            {selectedRole === "shop" && currentStep === 0 && (
+              <div className="shopRegisterHighlight" />
+            )}
+          </div>
+
+          {selectedRole === "shop" && currentStep === 0 && (
+            <>
+              <span className="shopRegisterArrow">→</span>
+              <span className="shopRegisterLabel">
+                Choose Laundry Shop Owner
+              </span>
+            </>
+          )}
         </div>
 
         <div className="registrationInfo">
