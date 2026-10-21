@@ -192,14 +192,14 @@
     cursor: pointer;
 }
 
-.sidebarLinks {
+.sidebarNavLinks {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 24px;
 }
 
-.sidebarLinks a,
+.sidebarNavLinks a,
 .sidebarActions button {
     display: block;
     padding: 14px 16px;
@@ -216,7 +216,7 @@
     cursor: pointer;
 }
 
-.sidebarLinks a:hover,
+.sidebarNavLinks a:hover,
 .sidebarActions button:hover {
     background: #ffca05;
     color: #242424;

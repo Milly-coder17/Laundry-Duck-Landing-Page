@@ -75,6 +75,22 @@
     object-fit: contain;
 }
 
+.heroButton {
+    display: inline-block;
+    padding: 15px 24px;
+    background: #242424;
+    color: #ffffff;
+    border: 2px solid #242424;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease,
+        transform 0.25s ease;
+}
+
 @media (max-width: 800px) {
     .hero {
         min-height: auto;

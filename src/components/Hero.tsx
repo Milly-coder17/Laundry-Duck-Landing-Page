@@ -18,9 +18,12 @@ function Hero() {
           take care of the rest.
         </p>
 
-        <button type="button" className="heroButton">
+        <a
+          href="https://laundryduck-frontend.onrender.com/"
+          className="heroButton"
+        >
           Get Started
-        </button>
+        </a>
       </div>
 
       <div className="heroImage">

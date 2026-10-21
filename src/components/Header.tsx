@@ -38,9 +38,12 @@ function Header() {
         </nav>
 
         <div className="headerActions">
-          <button type="button" className="signupBtn">
+          <a
+            href="https://laundryduck-frontend.onrender.com/"
+            className="signupBtn"
+          >
             Get Started
-          </button>
+          </a>
         </div>
 
         <button
@@ -89,16 +92,6 @@ function Header() {
             FAQs
           </a>
         </nav>
-
-        <div className="sidebarActions">
-          <button
-            type="button"
-            className="sidebarSignup"
-            onClick={closeMenu}
-          >
-            Get Started
-          </button>
-        </div>
       </aside>
     </>
   )
